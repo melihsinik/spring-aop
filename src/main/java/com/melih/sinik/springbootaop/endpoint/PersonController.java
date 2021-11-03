@@ -53,10 +53,4 @@ public class PersonController {
     public ResponseEntity<List<Person>> getAll() {
         return new ResponseEntity<>(personService.getAll(), HttpStatus.OK);
     }
-
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Void> getMessage() {
-        System.out.println("Hi");
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
 }

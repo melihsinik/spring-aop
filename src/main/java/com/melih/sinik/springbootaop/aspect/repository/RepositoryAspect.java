@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.access.AuthorizationServiceException;
 import org.springframework.stereotype.Component;
 
@@ -20,6 +21,7 @@ import java.util.Objects;
 @Component
 @RequiredArgsConstructor
 @Slf4j
+@Order(2)
 public class RepositoryAspect {
 
     private final UserAuthoritiesService userAuthoritiesService;
